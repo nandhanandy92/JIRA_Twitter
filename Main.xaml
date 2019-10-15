@@ -48,7 +48,20 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="RawTwitterName" />
+      <Variable x:TypeArguments="x:String" Default="NEWFOLLOWER_unicef" Name="RawTwitterName" />
+      <Variable x:TypeArguments="x:String" Name="twittername" />
+      <Variable x:TypeArguments="ui:Image" Name="twitterscreenshot" />
+      <Variable x:TypeArguments="x:String" Name="Tweets" />
+      <Variable x:TypeArguments="x:String" Name="Followings" />
+      <Variable x:TypeArguments="x:String" Name="Followers" />
+      <Variable x:TypeArguments="x:String" Name="Likes" />
+      <Variable x:TypeArguments="x:String" Name="twitterLink" />
+      <Variable x:TypeArguments="x:String" Name="int_tweets" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="int_followings" />
+      <Variable x:TypeArguments="ui:Browser" Name="JiraBrowser" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="int_followers" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="int_likes" />
+      <Variable x:TypeArguments="x:String" Name="Follwers" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -59,44 +72,38 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID0">
+    <FlowStep x:Name="__ReferenceID2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,124.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,124.5 300,124.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,176.5 300,204.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open IE" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://skcriptuipathtask.atlassian.net/secure/RapidBoard.jspa">
+      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="IE" DisplayName="JIRA todo - in-progress" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[JiraBrowser]" Url="https://skcriptuipathtask.atlassian.net/secure/RapidBoard.jspa">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Looking for new tasks" sap:VirtualizedContainerService.HintSize="536,4280" sap2010:WorkflowViewState.IdRef="Sequence_17">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:String" Name="twittername" />
-                <Variable x:TypeArguments="ui:Image" Name="twitterscreenshot" />
-                <Variable x:TypeArguments="x:String" Name="Tweets" />
-                <Variable x:TypeArguments="x:String" Name="Followings" />
-                <Variable x:TypeArguments="x:String" Name="Followers" />
-                <Variable x:TypeArguments="x:String" Name="Likes" />
-                <Variable x:TypeArguments="x:String" Name="twitterLink" />
-              </Sequence.Variables>
+            <Sequence DisplayName="Looking for new tasks" sap:VirtualizedContainerService.HintSize="418,1238" sap2010:WorkflowViewState.IdRef="Sequence_17">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="494,4188" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1146" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click first task" sap:VirtualizedContainerService.HintSize="452,106" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click first task" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition OffsetX="226" OffsetY="6" Position="TopLeft" />
                   </ui:Click.CursorPosition>
@@ -108,9 +115,9 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get the Task Name" sap:VirtualizedContainerService.HintSize="452,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get the Task Name" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
                   <ui:GetValue.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ca1db66321c4d4bc39db14927aac2a8c" Selector="&lt;webctrl aaname='  NEWFOLLOWER_unicef' parentid='jira' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ca1db66321c4d4bc39db14927aac2a8c" Selector="&lt;webctrl aaname='  NEWFOLLOWER_*' parentid='jira' tag='DIV' /&gt;&#xA;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -120,7 +127,7 @@
                     <OutArgument x:TypeArguments="x:String">[RawTwitterName]</OutArgument>
                   </ui:GetValue.Value>
                 </ui:GetValue>
-                <Assign DisplayName="Extract Twitter User Name" sap:VirtualizedContainerService.HintSize="452,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign DisplayName="Extract Twitter User Name" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[twittername]</OutArgument>
                   </Assign.To>
@@ -128,8 +135,8 @@
                     <InArgument x:TypeArguments="x:String">[RawTwitterName.Split("_"c)(1)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Twitter Handle name is&quot; + twittername]" />
-                <Assign sap:VirtualizedContainerService.HintSize="452,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Twitter Handle name is&quot; + twittername]" />
+                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[twitterLink]</OutArgument>
                   </Assign.To>
@@ -137,19 +144,19 @@
                     <InArgument x:TypeArguments="x:String">["https://twitter.com/"+twittername]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Status" sap:VirtualizedContainerService.HintSize="452,106" sap2010:WorkflowViewState.IdRef="Click_56" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Status" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_56" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition OffsetX="71" OffsetY="18" Position="TopLeft" />
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="970f7a1da309a7e19b2350a23563dfd4" Selector="&lt;webctrl aaname='Selected for Development' omit:isleaf='1' parentid='jira' tag='SPAN' omit:css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;span' innertext='Selected for Development' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="970f7a1da309a7e19b2350a23563dfd4" Selector="&lt;webctrl aaname='Selected for Development' isleaf='1' parentid='jira' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Set status to in-progress" sap:VirtualizedContainerService.HintSize="452,106" sap2010:WorkflowViewState.IdRef="Click_57" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Set status to in-progress" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_57" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition OffsetX="102" OffsetY="9" Position="TopLeft" />
                   </ui:Click.CursorPosition>
@@ -161,261 +168,12 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Close the task popup" sap:VirtualizedContainerService.HintSize="452,106" sap2010:WorkflowViewState.IdRef="Click_58" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Close the task popup" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_58" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition OffsetX="9" OffsetY="17" Position="TopLeft" />
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="52accf261152706150fe781b3d5898e6" Selector="&lt;webctrl id='jira-issue-header' parentid='jira' tag='HEADER' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;span&amp;gt;span' parentid='jira-issue-header' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="452,2161" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="[twitterLink]">
-                  <ui:OpenBrowser.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="418,2062" sap2010:WorkflowViewState.IdRef="Sequence_27">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,426" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="int_tweets" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Tweets span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_22">
-                            <ui:GetValue.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d0f19abcd740dd2509be15b48e7375eb" Selector="&lt;webctrl aaname='Tweets  Tweets, current page.   9' parentid='page-container' tag='A' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:GetValue.Target>
-                            <ui:GetValue.Value>
-                              <OutArgument x:TypeArguments="x:String">[Tweets]</OutArgument>
-                            </ui:GetValue.Value>
-                          </ui:GetValue>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[int_tweets]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[Regex.Replace(Tweets,"[^\d]","")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;no of tweets &quot; + int_tweets]" />
-                        </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,426" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="ui:GenericValue" Name="Followings" />
-                            <Variable x:TypeArguments="ui:GenericValue" Name="int_followings" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Tweets span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_23">
-                            <ui:GetValue.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="69cd89b9d4cd75eeaf3c2cf58d658d8f" Selector="&lt;webctrl aaname='Following  Following   352' parentid='page-container' tag='A' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:GetValue.Target>
-                            <ui:GetValue.Value>
-                              <OutArgument x:TypeArguments="ui:GenericValue">[Followings]</OutArgument>
-                            </ui:GetValue.Value>
-                          </ui:GetValue>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="ui:GenericValue">[int_followings]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="ui:GenericValue">[Regex.Replace(Followings,"[^\d]","")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;no of Followings &quot; + int_followings]" />
-                        </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,426" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="Followings" />
-                            <Variable x:TypeArguments="x:String" Name="Follwers" />
-                            <Variable x:TypeArguments="ui:GenericValue" Name="int_followers" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Tweets span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_24">
-                            <ui:GetValue.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5d1ed5279642d19b60a399072791382f" Selector="&lt;webctrl aaname='Followers  Followers   16' parentid='page-container' tag='A' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:GetValue.Target>
-                            <ui:GetValue.Value>
-                              <OutArgument x:TypeArguments="x:String">[Follwers]</OutArgument>
-                            </ui:GetValue.Value>
-                          </ui:GetValue>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="ui:GenericValue">[int_followers]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="ui:GenericValue">[Regex.Replace(Followers,"[^\d]","")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;no of Followers &quot; +int_followers]" />
-                        </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,426" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="Followings" />
-                            <Variable x:TypeArguments="x:String" Name="Follwers" />
-                            <Variable x:TypeArguments="x:String" Name="Likes" />
-                            <Variable x:TypeArguments="ui:GenericValue" Name="int_likes" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Tweets span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_25">
-                            <ui:GetValue.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d2290d0a517446db178c1bb1a6ee1930" Selector="&lt;webctrl aaname='Likes  Likes   339' parentid='page-container' tag='A' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:GetValue.Target>
-                            <ui:GetValue.Value>
-                              <OutArgument x:TypeArguments="x:String">[Likes]</OutArgument>
-                            </ui:GetValue.Value>
-                          </ui:GetValue>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="ui:GenericValue">[int_likes]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="ui:GenericValue">[Regex.Replace(Likes,"[^\d]","")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;no of Likes &quot; + int_likes]" />
-                        </Sequence>
-                        <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'DIV  page-container'" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[twitterscreenshot]">
-                          <ui:TakeScreenshot.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="87ec708f7f0fbef024753ba1b7b57bab" Selector="&lt;html title='* | Twitter' /&gt;&#xA;&lt;webctrl id='page-container' tag='DIV' /&gt;&#xA;" WaitForReady="COMPLETE">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                            </ui:Target>
-                          </ui:TakeScreenshot.Target>
-                        </ui:TakeScreenshot>
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:OpenBrowser.Body>
-                </ui:OpenBrowser>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'DIV'" sap:VirtualizedContainerService.HintSize="452,106" sap2010:WorkflowViewState.IdRef="Click_59" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="250" OffsetY="72" Position="TopLeft" />
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fbf5f897bb6111c0947dde245ab01edc" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div' parentid='ghx-pool' tag='DIV' aaname=RawTwitterName /&gt;&#xA;" WaitForReady="COMPLETE">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" EmptyField="False" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="True" Text="[&quot;Tweets : &quot; +Tweets +&quot;/nFollowers : &quot; + Followers  + &quot;/nFollowings : &quot;+ Followings + &quot;/nLikes : &quot;+Likes]">
-                  <ui:TypeInto.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="56ff8daae45c2c23a2d09a37c933e810" Selector="&lt;webctrl parentid='jira' tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                    </ui:Target>
-                  </ui:TypeInto.Target>
-                </ui:TypeInto>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_64" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c479e36cae23f09f7db32ae5579b4399" Selector="&lt;webctrl aaname='Save' isleaf='1' parentid='jira' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_61" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="129" OffsetY="20" Position="TopLeft" />
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5ccd61c6fdda142bd8c88b486106cf04" Selector="&lt;webctrl aaname='In Progress' parentid='jira' tag='BUTTON' type='button' /&gt;" WaitForReady="COMPLETE">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_62" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="46" OffsetY="11" Position="TopLeft" />
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9d590aa93d93583d5ce20556b02a5313" Selector="&lt;webctrl parentid='react-select-5-option-1' tag='DIV' /&gt;" WaitForReady="COMPLETE">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_63" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="10" OffsetY="15" Position="TopLeft" />
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f3d3f08d801de7b62621b0443c64d70c" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;span&amp;gt;span' parentid='jira-issue-header' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -433,8 +191,347 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:OpenBrowser>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID0</x:Reference>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,204.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,256.5 300,284.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Twitter - Scrape data &amp; screenshot" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="[twitterLink]">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="418,2426" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,428" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Tweets span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_26">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d0f19abcd740dd2509be15b48e7375eb" Selector="&lt;html title='*| Twitter' /&gt;&#xA;&lt;webctrl aaname='* Tweets' parentid='page-container' tag='A' /&gt;&#xA;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Tweets]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[int_tweets]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Regex.Replace(Tweets,"[^\d]","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;no of tweets &quot; + int_tweets]" />
+                  </Sequence>
+                  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,428" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Following span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_27">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="69cd89b9d4cd75eeaf3c2cf58d658d8f" Selector="&lt;html title='*| Twitter' /&gt;&#xA;&lt;webctrl aaname='* Following' parentid='page-container' tag='A' /&gt;&#xA;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Followings]</OutArgument>
+                      </ui:GetValue.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetValue>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="ui:GenericValue">[int_followings]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="ui:GenericValue">[Regex.Replace(Followings,"[^\d]","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;no of Followings &quot; + int_followings]" />
+                  </Sequence>
+                  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,428" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Followers span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_28">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5d1ed5279642d19b60a399072791382f" Selector="&lt;html title='*| Twitter' /&gt;&#xA;&lt;webctrl aaname='* Followers' parentid='page-container' tag='A' /&gt;&#xA;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Followers]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="ui:GenericValue">[int_followers]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="ui:GenericValue">[Regex.Replace(Followers,"[^\d]","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;no of Followers &quot; +int_followers]" />
+                  </Sequence>
+                  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,428" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Likes span" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_29">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d2290d0a517446db178c1bb1a6ee1930" Selector="&lt;html title='*| Twitter' /&gt;&#xA;&lt;webctrl aaname='* Likes' parentid='page-container' tag='A' /&gt;&#xA;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="x:String">[Likes]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="ui:GenericValue">[int_likes]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="ui:GenericValue">[Regex.Replace(Likes,"[^\d]","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;no of Likes &quot; + int_likes]" />
+                  </Sequence>
+                  <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot of the twiter handle" sap:VirtualizedContainerService.HintSize="376,52" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[twitterscreenshot]">
+                    <ui:TakeScreenshot.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6dc3b810da816a639c08c71202276fdb" Selector="&lt;html title='*| Twitter' /&gt;" WaitForReady="COMPLETE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:TakeScreenshot.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:TakeScreenshot>
+                  <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="376,52" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Environment.CurrentDirectory + &quot;\TwitterScreenshots&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CreateDirectory>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="376,62" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[Environment.CurrentDirectory + &quot;\TwitterScreenshots\&quot; +twittername + System.DateTime.Now.ToString + &quot;.png&quot;]" />
+                  <ui:SaveImage DisplayName="Save Image" FileName="[Environment.CurrentDirectory + &quot;\TwitterScreenshots\&quot; +twittername + &quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="376,52" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[twitterscreenshot]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SaveImage>
+                  <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:OpenBrowser>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">200,284.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[JiraBrowser]" DisplayName="JIRA in-progress - Done" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+                <ui:BrowserScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1304" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[RawTwitterName]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[RawTwitterName.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_65" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition OffsetX="45" OffsetY="17" Position="TopLeft" />
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bf0330221c6a1a960551cfae46c2f880" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&lt;webctrl tag='DIV' aaname='{{RawTwitterName}}*' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;Tweets : &quot; + int_tweets  + &quot; | Followings : &quot; + int_followings + &quot; | Followers : &quot;+ int_followers + &quot; | Likes : &quot;+ int_likes]" />
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_70" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3036ded05f0b6a82208de53e3e09497a" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&lt;webctrl parentid='jira' tag='INPUT' type='text' aaname='Add a comment…' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:TypeInto DelayBefore="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="300" DisplayName="Adding comment" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="False" Text="[&quot;Tweets : &quot; + int_tweets  + &quot; | Followings : &quot; + int_followings + &quot; | Followers : &quot;+ int_followers + &quot; | Likes : &quot;+ int_likes]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4a5a4b1397214cff681e1aaefbd0c7c6" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&lt;webctrl tag='P' aaname='Add a comment…' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c479e36cae23f09f7db32ae5579b4399" Selector="&lt;webctrl aaname='Save' isleaf='1' parentid='jira' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_67" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition OffsetX="127" OffsetY="23" Position="TopLeft" />
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e9de810d8a3d4a8862bc5dd7601a4a10" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&lt;webctrl aaname='In Progress' isleaf='1' parentid='jira' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_68" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition OffsetX="37" OffsetY="19" Position="TopLeft" />
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9d590aa93d93583d5ce20556b02a5313" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&#xD;&#xA;&lt;webctrl tag='DIV' aaname='  Done' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_69" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition OffsetX="8" OffsetY="14" Position="TopLeft" />
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5c68344ca8a2b6272d8745aeb046e763" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&#xD;&#xA;&lt;webctrl parentid='jira-issue-header' tag='SPAN' isleaf='0' idx='10' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:BrowserScope.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:BrowserScope>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
   </Flowchart>
 </Activity>
