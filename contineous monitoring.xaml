@@ -158,7 +158,7 @@
                 </Sequence>
               </ui:OnUiElementAppear.Body>
               <ui:OnUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="34ce50a29ba09a3f31bb57f9f518a2d9" Selector="&lt;webctrl id='ghx-pool-column' parentid='ghx-work' tag='DIV' /&gt;&lt;webctrl parentid='ghx-pool' tag='DIV' aaname='NEWFOLLOWER_*' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="34ce50a29ba09a3f31bb57f9f518a2d9" Selector="&lt;webctrl aaname='NEWFOLLOWER_*' parentid='ghx-pool' tag='DIV' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
