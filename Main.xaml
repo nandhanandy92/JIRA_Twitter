@@ -70,7 +70,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 310,107.5 310,114.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124.5</av:PointCollection>
         <x:Double x:Key="Width">691.5</x:Double>
         <x:Double x:Key="Height">657</x:Double>
       </scg:Dictionary>
@@ -81,9 +81,9 @@
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">300,414.5</av:Point>
+          <av:Point x:Key="ShapeLocation">290,424.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">400,465.5 400,484.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">390,475.5 390,494.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Twitter - Scrape data &amp; screenshot" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" UiBrowser="[TwitterBrowser]" Url="[twitterLink]">
@@ -284,9 +284,9 @@
         <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">300,484.5</av:Point>
+              <av:Point x:Key="ShapeLocation">290,494.5</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">400,535.5 400,565.5 530,565.5 530,360 500,360</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">390,545.5 390,575.5 520,575.5 520,370 490,370</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[JiraBrowser]" BrowserType="IE" DisplayName="JIRA in-progress - Done" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
@@ -295,7 +295,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,2537" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,2628" sap2010:WorkflowViewState.IdRef="Sequence_37">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -314,7 +314,7 @@
                       <ui:CursorPosition OffsetX="45" OffsetY="17" Position="TopLeft" />
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bf0330221c6a1a960551cfae46c2f880" Selector="&lt;webctrl parentid='ghx-pool' tag='DIV' aaname='{{RawTwitterName}}*' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bf0330221c6a1a960551cfae46c2f880" Selector="&lt;webctrl parentid='ghx-pool' tag='DIV' aaname='{{RawTwitterName}}*' /&gt;&#xA;" WaitForReady="COMPLETE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -467,7 +467,36 @@
                       </ui:WindowScope.Body>
                     </ui:WindowScope>
                   </Sequence>
-                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_70" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="m" KeyModifiers="None">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7fbf1cd7a98c63bc173c7990287fbd3d" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='jira' tag='DIV' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:Click ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_102" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -479,7 +508,7 @@
                       </ui:CursorPosition>
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="763361b985d1a7cec9e7b1dc6aea4e22" Selector="&lt;webctrl parentid='jira' tag='INPUT' type='text' aaname='Add a comment…' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="763361b985d1a7cec9e7b1dc6aea4e22" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&lt;webctrl parentid='jira' tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -488,7 +517,7 @@
                   </ui:Click>
                   <ui:TypeInto Activate="True" ClickBeforeTyping="True" DelayBefore="1000" DelayBetweenKeys="300" DelayMS="1000" DisplayName="Adding comment" EmptyField="True" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="False" Text="[&quot;Tweets : &quot; + int_tweets  + &quot; | Followings : &quot; + int_followings + &quot; | Followers : &quot;+ int_followers + &quot; | Likes : &quot;+ int_likes]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eaed424389a33817a79f8e0761ac8b50" Selector="&lt;webctrl tag='P' /&gt;" WaitForReady="COMPLETE">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eaed424389a33817a79f8e0761ac8b50" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&lt;webctrl aaname='  Add a comment…﻿' idx='1' parentid='jira' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -507,7 +536,7 @@
                       </ui:CursorPosition>
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="525bb49506e18c5ef30434975155dca5" Selector="&lt;webctrl aaname='Save' isleaf='1' parentid='jira' tag='SPAN' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="525bb49506e18c5ef30434975155dca5" Selector="&lt;webctrl aaname='Save' isleaf='1' parentid='jira' tag='SPAN' /&gt;&#xA;" WaitForReady="COMPLETE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -543,7 +572,7 @@
                       <ui:CursorPosition OffsetX="8" OffsetY="14" Position="TopLeft" />
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5c68344ca8a2b6272d8745aeb046e763" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&#xD;&#xA;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;span&amp;gt;span' parentid='jira-issue-header' tag='SPAN' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5c68344ca8a2b6272d8745aeb046e763" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&#xA;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;span&amp;gt;span' parentid='jira-issue-header' tag='SPAN' /&gt;&#xA;" WaitForReady="COMPLETE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -563,12 +592,12 @@
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">300,327</av:Point>
+                  <av:Point x:Key="ShapeLocation">290,337</av:Point>
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">400,393 400,414.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">390,403 390,424.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="JIRA todo - in-progress" sap:VirtualizedContainerService.HintSize="494,1437" sap2010:WorkflowViewState.IdRef="Sequence_53">
+              <Sequence DisplayName="JIRA todo - in-progress" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_53">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -653,7 +682,7 @@
                               <ui:CursorPosition OffsetX="102" OffsetY="9" Position="TopLeft" />
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bad4b962fa40b112cdf62b0bd12d9779" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&#xD;&#xA;&lt;webctrl isleaf='1' parentid='react-select-2-option-0' tag='SPAN' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bad4b962fa40b112cdf62b0bd12d9779" Selector="&lt;html title='UT board - Agile Board - Jira' /&gt;&#xA;&lt;webctrl isleaf='1' parentid='react-select-2-option-0' tag='SPAN' /&gt;&#xA;" WaitForReady="COMPLETE">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -690,9 +719,9 @@
     <FlowStep x:Name="__ReferenceID5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">210,114.5</av:Point>
+          <av:Point x:Key="ShapeLocation">200,124.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">310,166.5 310,196.5 285,196.5 285,216.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,175.5 300,205.5 280,205.5 280,226.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Check Login" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_6" UiBrowser="[JiraBrowser]" Url="https://skcriptuipathtask.atlassian.net/secure/RapidBoard.jspa">
@@ -729,19 +758,19 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">242,216.5</av:Point>
+              <av:Point x:Key="ShapeLocation">238,226.5</av:Point>
               <av:Size x:Key="ShapeSize">84,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">242,260 100,260 100,306</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">326,260 400,260 400,327</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">238,270 100,270 100,317</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">322,270 390,270 390,337</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
             <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">0,306</av:Point>
+                  <av:Point x:Key="ShapeLocation">0,317</av:Point>
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">100,372 100,390 270,390 270,360 300,360</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">100,383 100,400 260,400 260,370 290,370</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_40">
